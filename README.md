@@ -2,42 +2,39 @@
 
 ## アーキテクチャ一覧
 
-## nc
+- **NetCat Server**
+    - netcatコマンドを使った簡易サーバ。
+    - listenなどの基本を確認できる。
 
-netcatコマンドを使った簡易サーバ。
-listenなどの基本を確認できる。
+- **CGI (Common Gateway Interface)**
 
-### cgi (Common Gateway Interface)
+    - httpリクエストに対してスクリプトを実行し、標準出力としてそのまま返す。
+    - クエリパラメータは環境変数から読み込む。
 
-httpリクエストに対してスクリプトを実行し、標準出力としてそのまま返す方式。
-クエリパラメータは環境変数に入れられるのでそれを読み込む。
+- **SSI** (Server Side Includes)
+    - インクルードディレクティブと呼ばれる命令をHTMLに埋め込む。
+    - テンプレートエンジンの祖先。
 
-### ssi (Server Side Includes)
+- **Template Engine**
+    - テンプレートを用意しスクリプトで動的にコンテンツを生成する。
 
-インクルードディレクティブと呼ばれる命令をHTMLに埋め込む。
-テンプレートエンジンの祖先
+## 動作確認
 
-### template engine
+### 起動
 
-テンプレートを用意し、そこにエンジンと呼ばれるスクリプトで動的にコンテンツを生成する。
-
-### 動作確認
-
-#### 起動
-
-対象アーキテクチャのディレクトリに移動
-
+対象アーキテクチャのディレクトリに移動してcompose up
 ```
+cd cgi
 docker compose up -d
 ```
 
-#### 出力確認
+### 出力確認
 
 ```
 curl -i localhost:80
 ```
 
-#### 停止
+### 停止
 
 ```
 docker compose down
