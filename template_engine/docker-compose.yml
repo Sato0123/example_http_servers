@@ -6,7 +6,7 @@ services:
       context: .
     container_name: server
     ports:
-      - "83:80"
+      - "80:80"
     volumes:
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
       - ./var/www/html:/var/www/html
