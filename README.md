@@ -2,6 +2,11 @@
 
 ## アーキテクチャ一覧
 
+## nc
+
+netcatコマンドを使った簡易サーバ。
+listenなどの基本を確認できる。
+
 ### cgi (Common Gateway Interface)
 
 httpリクエストに対してスクリプトを実行し、標準出力としてそのまま返す方式。
